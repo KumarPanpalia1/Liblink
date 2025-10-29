@@ -1,0 +1,44 @@
+<!-- liblink/client/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LibLink • Smart Library Assistant</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#2563eb',
+              secondary: '#8b5cf6',
+            }
+          }
+        }
+      }
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .btn {
+          @apply px-5 py-2.5 rounded-lg font-medium transition-all duration-200 shadow-sm;
+        }
+        .btn-primary {
+          @apply bg-primary text-white hover:bg-blue-700 active:scale-95;
+        }
+        .btn-secondary {
+          @apply bg-secondary text-white hover:bg-violet-700 active:scale-95;
+        }
+        .btn-outline {
+          @apply border border-gray-300 text-gray-700 hover:bg-gray-50;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
